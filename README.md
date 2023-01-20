@@ -82,6 +82,5 @@
 - 자녀 컴포넌트에서 각자 api 호출이 좋은지, 부모 컴포넌트에서 호출을 한 후 prop으로 내리는 게 좋을지
 - 더미데이터를 useState의 기본값에 할당을 해주어서 처음 렌더링 할때 더미데이터 값이 먼저 렌더링 되고 그 다음에 api에서 받아온 값이 렌더링 되는데 고칠 수 있는 방법이 있는지
 =======
-<img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white">
-</div>
+
 
