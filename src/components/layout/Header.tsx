@@ -91,12 +91,14 @@ const Header = ({
         <Box>
           <BsBell className="bell" />
         </Box>
-        <Profile>
-          <img
-            src="https://avatars.githubusercontent.com/u/122767468?s=200&v=4"
-            alt="profile"
-          />
-        </Profile>
+        <a href="https://github.com/bulsazo/youtube-app" target="blank">
+          <Profile>
+            <img
+              src="https://avatars.githubusercontent.com/u/122767468?s=200&v=4"
+              alt="profile"
+            />
+          </Profile>
+        </a>
       </End>
     </Container>
   );
@@ -207,11 +209,15 @@ const Profile = styled.button`
   height: 40px;
   background-color: rgb(249, 249, 249);
   border: none;
+  overflow: hidden;
+  position: relative;
   cursor: pointer;
   img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
   }
 `;
 
