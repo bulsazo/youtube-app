@@ -97,7 +97,13 @@ const Btn = styled.button`
     color: #0f0f0f;
 
     @media (prefers-color-scheme: dark) {
-      color: #fff;
+      color: #f1f1f1;
+    }
+  }
+
+  svg {
+    @media (prefers-color-scheme: dark) {
+      color: #f1f1f1;
     }
   }
 `;

@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { instance } from "../../api";
+import { searchVideoDummyData } from "../../data/data";
 import styled from "styled-components";
-import SearchCard from "../../components/SearchCard";
+import SearchCard from "../../components/search/SearchCard";
 import { getSearchData } from "../../api/api";
+import type { VideoSearchData } from "../../types/videoSearchTypes";
 
 const Search = ({ open }: { open: boolean }) => {
-  const [result, setResult] = useState<Search[]>([]);
+  const [result, setResult] = useState<VideoSearchData[]>(searchVideoDummyData);
   const [isError, setIsError] = useState<string>("");
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
@@ -15,10 +16,12 @@ const Search = ({ open }: { open: boolean }) => {
   const searchWord = query.get("q") || "";
 
   useEffect(() => {
+    document.title = "YouTube";
+  }, []);
+
+  useEffect(() => {
     getSearchData(searchWord, setResult, setIsError);
   }, [searchWord]);
-
-  // localStorage.setItem("item", JSON.stringify(result));
 
   return (
     <Container open={open}>
@@ -40,7 +43,7 @@ const Search = ({ open }: { open: boolean }) => {
           <span>필터</span>
         </div>
       </Filter>
-      {result.map((data: Search) => {
+      {result.map((data: VideoSearchData) => {
         return <SearchCard data={data} key={data.id.videoId}></SearchCard>;
       })}
     </Container>
@@ -79,45 +82,5 @@ const Filter = styled.div`
     margin-right: 6px;
   }
 `;
-export interface Search {
-  kind: string;
-  etag: string;
-  id: Id;
-  snippet: Snippet;
-}
-export interface Id {
-  kind: string;
-  videoId: string;
-}
-export interface Snippet {
-  publishedAt: string;
-  channelId: string;
-  title: string;
-  description: string;
-  thumbnails: Thumbnails;
-  channelTitle: string;
-  liveBroadcastContent: string;
-  publishTime: string;
-}
-export interface Thumbnails {
-  default: Default;
-  medium: Medium;
-  high: High;
-}
-export interface Default {
-  url: string;
-  width: number;
-  height: number;
-}
-export interface Medium {
-  url: string;
-  width: number;
-  height: number;
-}
-export interface High {
-  url: string;
-  width: number;
-  height: number;
-}
 
 export default Search;

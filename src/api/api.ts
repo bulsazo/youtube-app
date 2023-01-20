@@ -1,6 +1,6 @@
 import { AxiosError } from "axios";
 import { instance } from ".";
-// get comments
+
 interface FetchFn {
   (
     id: string,
@@ -8,8 +8,6 @@ interface FetchFn {
     setError: React.Dispatch<React.SetStateAction<string>>,
   ): void;
 }
-
-// get video detail
 
 export const getComments: FetchFn = async (id, setState, setError) => {
   try {

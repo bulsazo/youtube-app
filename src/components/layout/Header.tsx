@@ -21,7 +21,6 @@ const Header = ({
     (document.activeElement as HTMLElement).blur();
   };
 
-  console.log("open", open);
   return (
     <Container>
       <Start>
@@ -131,7 +130,7 @@ const Start = styled.div`
 const Box = styled.div`
   display: flex;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(220, 220, 220, 0.5);
     border-radius: 50%;
   }
 `;
@@ -195,7 +194,7 @@ const Submit = styled.button`
   margin-right: 10px;
   cursor: pointer;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(220, 220, 220, 0.9);
   }
   svg {
     font-size: 18px;
@@ -218,7 +217,7 @@ const Profile = styled.button`
 
 const Voice = styled(Profile)`
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(220, 220, 220, 0.9);
   }
   svg {
     font-size: 16px;

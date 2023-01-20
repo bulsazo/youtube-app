@@ -1,89 +1,45 @@
 import { instance } from "../../api/index";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import Card from "../../components/Card";
+import MainCard from "../../components/home/MainCard";
 import { mainVideoDummyData } from "../../data/data";
-
-export interface VideoData {
-  kind: string;
-  etag: string;
-  id: Id;
-  snippet: Snippet;
-}
-
-export interface Id {
-  kind: string;
-  videoId: string;
-}
-
-export interface Snippet {
-  publishedAt: string;
-  channelId: string;
-  title: string;
-  description: string;
-  thumbnails: Thumbnails;
-  channelTitle: string;
-  liveBroadcastContent: string;
-  publishTime: string;
-}
-
-export interface Thumbnails {
-  default: Default;
-  medium: Medium;
-  high: High;
-}
-
-export interface Default {
-  url: string;
-  width: number;
-  height: number;
-}
-
-export interface Medium {
-  url: string;
-  width: number;
-  height: number;
-}
-
-export interface High {
-  url: string;
-  width: number;
-  height: number;
-}
+import { VideoSearchData } from "../../types/videoSearchTypes";
+import { getSearchData } from "../../api/api";
 
 const Home = ({ open }: { open: boolean }) => {
+  const [videoResult, setVideoResult] = useState(mainVideoDummyData);
+  const [isError, setIsError] = useState<string>("");
+  const searchWord = "검색어";
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await instance.get(
-          "/search?part=snippet&maxResults=10&q={동물의숲}",
-        );
-        const MovieData = response.data;
-        localStorage.setItem("동물의숲", JSON.stringify(response.data));
-      } catch (e) {
-        console.log((e as Error).message);
-      }
-    };
-    //  fetchData();
+    document.title = "YouTube";
   }, []);
 
+  useEffect(() => {
+    getSearchData(searchWord, setVideoResult, setIsError);
+  }, [searchWord]);
+
   // dummyData 로컬에 저장
-  localStorage.setItem("동물의숲", JSON.stringify(mainVideoDummyData));
+  localStorage.setItem(
+    "mainVideoDummyData",
+    JSON.stringify(mainVideoDummyData),
+  );
 
   // dummyData 로컬에서 가져오기
-  const localData = JSON.parse(localStorage.getItem("동물의숲") || "");
+  const localData = JSON.parse(
+    localStorage.getItem("mainVideoDummyData") || "",
+  );
 
   return (
     <Container open={open}>
-      {localData.items.map((item: VideoData) => {
-        return <Card key={item.id.videoId} item={item} />;
+      {localData.items.map((item: VideoSearchData, i: number) => {
+        return <MainCard key={item.id.videoId} item={item} i={i} />;
       })}
     </Container>
   );
 };
 
 const Container = styled.div<{ open: boolean }>`
-  /* flex-wrap: wrap; */
   width: ${(props) => (props.open ? "calc(100% - 240)" : "calc(100% - 72)")}px;
   height: auto;
   padding: 100px 33px 0 33px;

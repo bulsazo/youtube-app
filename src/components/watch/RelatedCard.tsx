@@ -7,23 +7,23 @@ import { nFormatter } from "../../utils/nFormatter";
 import { videoTime } from "../../utils/videoTime";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { BiListCheck, BiDotsVerticalRounded } from "react-icons/bi";
-import { getVideoDetail } from "../../api/api"
-import { videoDetailDummyData } from "../../data/data"
-import type { RelatedItem } from "../../types/relatedItemType"
-import type { Video } from "../../types/relatedCardTypes"
+import { getVideoDetail } from "../../api/api";
+import { videoDetailDummyData } from "../../data/data";
+import type { RelatedItem } from "../../types/relatedItemType";
+import type { Video } from "../../types/relatedCardTypes";
 
 type Props = { item: RelatedItem };
 
 function RelatedCard({ item }: Props) {
-  localStorage.setItem("relatedCard",JSON.stringify(item))
-  
+  localStorage.setItem("relatedCard", JSON.stringify(item));
+
   const videoDate: number = new Date(item.snippet.publishTime).getTime();
   const [videoResult, setVideoResult] = useState<Video>(videoDetailDummyData);
   const [isHovering, setIsHovering] = useState<boolean>(false);
-  const [isError, setIsError] = useState<string>("")
-  useEffect(() => {
-    getVideoDetail(item.id.videoId, setVideoResult, setIsError);
-  }, [item]);
+  const [isError, setIsError] = useState<string>("");
+  // useEffect(() => {
+  //   // getVideoDetail(item.id.videoId, setVideoResult, setIsError);
+  // }, [item]);
   const watchLink = `/watch/${item.id.videoId}`;
   return (
     <Link to={watchLink}>

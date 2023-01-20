@@ -141,7 +141,7 @@ const Tags = styled.div`
   font-size: 12px;
 `;
 
-const Tag = styled.p`
+const Tag = styled.div`
   margin-right: 0.5rem;
   cursor: pointer;
 `;

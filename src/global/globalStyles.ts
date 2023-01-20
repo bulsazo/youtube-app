@@ -32,15 +32,6 @@ ${reset}
     p {
       color: #fff
     }
-
-    .wrap {
-      &:hover{
-        border-radius: 10px;
-      background-color: #0F0F0F;
-      transition: 0.2s;
-      cursor: pointer;
-      }
-    }
   }
 `;
 
