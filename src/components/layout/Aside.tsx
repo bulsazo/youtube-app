@@ -427,6 +427,7 @@ const Close = styled.aside`
   box-sizing: border-box;
   top: 0;
   flex-direction: column;
+  cursor: pointer;
   .wrap {
     width: 100%;
     height: 74px;
