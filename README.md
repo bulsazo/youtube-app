@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/170bfd9e-858c-41d4-bf11-1a47f894d3a8/deploy-status)](https://app.netlify.com/sites/bulsazotube-dev/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/170bfd9e-858c-41d4-bf11-1a47f894d3a8/deploy-status)](https://app.netlify.com/sites/bulsazotube/deploys)
 
 <br />
 
@@ -9,6 +9,7 @@
 ## 배포 사이트
 
 [불사조 유튜브](https://bulsazotube.netlify.app/)
+
 
 # 팀원
 
@@ -39,6 +40,7 @@
 <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
 <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white">
 <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
+
 <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white"><br /><br />
 </div>
 
@@ -79,3 +81,7 @@
 - 혹은 하나의 이펙트안에서 axios.all을 이용해 처리하는게 좋은지
 - 자녀 컴포넌트에서 각자 api 호출이 좋은지, 부모 컴포넌트에서 호출을 한 후 prop으로 내리는 게 좋을지
 - 더미데이터를 useState의 기본값에 할당을 해주어서 처음 렌더링 할때 더미데이터 값이 먼저 렌더링 되고 그 다음에 api에서 받아온 값이 렌더링 되는데 고칠 수 있는 방법이 있는지
+=======
+<img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white">
+</div>
+
