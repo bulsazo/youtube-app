@@ -22,25 +22,25 @@
   <td align="center"><a href="https://github.com/1myeji">팀원: 임예지</a></td>
   </tr>
   <tr>
-  <td align="center"><a href="https://github.com/yujiseok"><img src="https://avatars.githubusercontent.com/u/83855636?s=64&v=4" width="150px;" style="max-width: 100%;"/></a></td>
-  <td align="center"><a href="https://github.com/Jaeheon-So"><img src="https://avatars.githubusercontent.com/u/79908684?v=4" width="150px;" style="max-width: 100%;"/></a></td>
-  <td align="center"><a href="https://github.com/hoheesu"><img src="https://avatars.githubusercontent.com/u/99115509?s=64&v=4" width="150px;" style="max-width: 100%;"/></a></td>
-  <td align="center"><a href="https://github.com/jisooround"><img src="https://avatars.githubusercontent.com/u/110647022?s=64&v=4" width="150px;" style="max-width: 100%;"/></a></td>
-   <td align="center"><a href="https://github.com/1myeji"><img src="https://avatars.githubusercontent.com/u/106291546?s=64&v=4" width="150px;" style="max-width: 100%;"/></a></td>
-  </tr>
-  <tr>
+  <td align="center"><a href="https://github.com/yujiseok"><img src="https://avatars.githubusercontent.com/u/83855636?s=400&u=7b00ef50bdc25603c2761b99ce36cad936cbd5cd&v=4" width="150px;" /></a></td>
+  <td align="center"><a href="https://github.com/Jaeheon-So"><img src="https://avatars.githubusercontent.com/u/79908684?v=4" width="150px;" /></a></td>
+  <td align="center"><a href="https://github.com/hoheesu"><img src="https://avatars.githubusercontent.com/u/99115509?v=4" width="150px;" /></a></td>
+  <td align="center"><a href="https://github.com/jisooround"><img src="https://avatars.githubusercontent.com/u/110647022?v=4" width="150px;" /></a></td>
+   <td align="center"><a href="https://github.com/1myeji"><img src="https://avatars.githubusercontent.com/u/106291546?v=4" width="150px;" /></a></td>
   </tr>
   </tbody>
 </table>
 
 # 🔨기술 스택
 
+<div>
 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
 <img src="https://img.shields.io/badge/vite-646CFF?style=for-the-badge&logo=vite&logoColor=white">
 <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
 <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white">
 <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
 <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white"><br /><br />
+</div>
 
 # 📆 과제 기간 및 담당 업무
 
