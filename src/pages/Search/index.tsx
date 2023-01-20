@@ -16,7 +16,7 @@ const Search = ({ open }: { open: boolean }) => {
   const searchWord = query.get("q") || "";
 
   useEffect(() => {
-    document.title = "Youtube";
+    document.title = "YouTube";
   }, []);
 
   useEffect(() => {
