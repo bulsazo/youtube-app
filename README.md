@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/170bfd9e-858c-41d4-bf11-1a47f894d3a8/deploy-status)](https://app.netlify.com/sites/bulsazotube-dev/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/170bfd9e-858c-41d4-bf11-1a47f894d3a8/deploy-status)](https://app.netlify.com/sites/bulsazotube/deploys)
 
 <br />
 
