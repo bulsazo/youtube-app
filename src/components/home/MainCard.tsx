@@ -142,8 +142,12 @@ const Image = styled.div`
   margin: 12px 12px 0 0;
   border-radius: 100px;
   overflow: hidden;
+  position: relative;
   img {
     height: 36px;
+    position: absolute;
+    left: -15px;
+    margin: auto;
   }
 `;
 const Detail = styled.div`
